@@ -17,6 +17,8 @@ interface ProjectCardProps {
  */
 const ProjectCard = ({ preview, title, description, link, className = '' }: ProjectCardProps) => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [touchStart, setTouchStart] = useState<number | null>(null)
+  const [touchEnd, setTouchEnd] = useState<number | null>(null)
 
   const nextSlide = (e: React.MouseEvent) => {
     e.stopPropagation()
@@ -28,9 +30,36 @@ const ProjectCard = ({ preview, title, description, link, className = '' }: Proj
     setCurrentSlide(prev => (prev - 1 + preview.length) % preview.length)
   }
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > 50
+    const isRightSwipe = distance < -50
+
+    if (isLeftSwipe) {
+      setCurrentSlide(prev => (prev + 1) % preview.length)
+    } else if (isRightSwipe) {
+      setCurrentSlide(prev => (prev - 1 + preview.length) % preview.length)
+    }
+  }
+
   return (
     <div className={`group ${className}`}>
-      <div className="aspect-[16/10] bg-gray-200 rounded-3xl mb-6 overflow-hidden relative shadow-sm">
+      <div
+        className="aspect-[16/10] bg-gray-200 rounded-3xl mb-6 overflow-hidden relative shadow-sm touch-pan-y"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         {preview.length > 0 ? (
           <>
             <div
