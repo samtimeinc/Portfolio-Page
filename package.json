@@ -1,7 +1,7 @@
 {
-  "name": "fes-copilot-course",
+  "name": "sam-phin-portfolio",
   "version": "1.0.0",
-  "description": "Practice repository for FES GitHub Copilot Course",
+  "description": "Capstone project for Frontend Simplified course - Portfolio website for Sam Phin, a software engineer specializing in frontend development. Explore projects, skills, and experience in web development.",
   "private": true,
   "scripts": {
     "dev": "next dev",

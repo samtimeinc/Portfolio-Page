@@ -7,6 +7,7 @@ interface ProjectCardProps {
   preview: string[]
   title: string
   description: string
+  link: string
   className?: string
 }
 
@@ -14,7 +15,7 @@ interface ProjectCardProps {
  * ProjectCard Component
  * Displays a project with a title, description, and an image slide deck preview.
  */
-const ProjectCard = ({ preview, title, description, className = '' }: ProjectCardProps) => {
+const ProjectCard = ({ preview, title, description, link, className = '' }: ProjectCardProps) => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const nextSlide = (e: React.MouseEvent) => {
@@ -28,7 +29,7 @@ const ProjectCard = ({ preview, title, description, className = '' }: ProjectCar
   }
 
   return (
-    <div className={`group cursor-pointer ${className}`}>
+    <div className={`group ${className}`}>
       <div className="aspect-[16/10] bg-gray-200 rounded-3xl mb-6 overflow-hidden relative shadow-sm">
         {preview.length > 0 ? (
           <>
@@ -86,9 +87,14 @@ const ProjectCard = ({ preview, title, description, className = '' }: ProjectCar
         )}
         <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/5 transition-all duration-500 pointer-events-none"></div>
       </div>
-      <h3 className="text-2xl font-bold mb-2 group-hover:text-blue-600 transition-colors">
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-2xl font-bold mb-2 block group-hover:text-blue-600 transition-colors cursor-pointer"
+      >
         {title}
-      </h3>
+      </a>
       <p className="text-gray-600">{description}</p>
     </div>
   )

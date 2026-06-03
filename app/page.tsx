@@ -279,7 +279,7 @@ const Module5Portfolio = () => {
                 I specialize in building accessible, high-performance web applications using React
                 and TypeScript. Let's turn your ideas into reality.
               </p>
-              <div></div>
+              
               <div
                 className={`flex flex-wrap gap-4 transition-opacity duration-1000 delay-700 ${
                   isMounted ? 'opacity-100' : 'opacity-0'
@@ -345,6 +345,7 @@ const Module5Portfolio = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+
               <ProjectCard
                 preview={[
                   '/ultraverse01.png',
@@ -354,6 +355,7 @@ const Module5Portfolio = () => {
                 ]}
                 title="Ultraverse NFT World"
                 description="A mock digital goods trading platform."
+                link="https://samnang-virtual-internship-vercel.vercel.app/"
               />
 
               <ProjectCard
@@ -365,8 +367,9 @@ const Module5Portfolio = () => {
                 ]}
                 title="Summarist"
                 description="A mock full stack ebook service."
-                className="animate-in fade-in slide-in-from-bottom-4 duration-500"
+                link="https://summarist-wm79.vercel.app/"
               />
+
             </div>
 
             <div
@@ -374,12 +377,18 @@ const Module5Portfolio = () => {
             >
               <div className="overflow-hidden">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+
                   <ProjectCard
-                    preview={['/famedb01.png', '/famedb02.png', '/famedb03.png', '/famedb04.png']}
+                    preview={[
+                      '/famedb01.png', 
+                      '/famedb02.png', 
+                      '/famedb03.png', 
+                      '/famedb04.png'
+                    ]}
                     title="FameDB"
                     description="Mini project blending colors, icons, and simple effects to create an engaging UI. Mock tv/film db frontend."
+                    link="https://famedbvercel.vercel.app/"
                   />
-                  
                 </div>
               </div>
             </div>
@@ -410,7 +419,7 @@ const Module5Portfolio = () => {
                 <p>
                   My journey into software engineering didn't start in a lecture hall; I've always
                   had an affinity for it. My most recent career placed me right in the middle
-                  fast-paced, high-pressure world of operations management. For a decade, I ran 4
+                  fast-paced, high-pressure world of hospitality operations management. For a decade, I ran 4
                   different million-dollar stores, scaled teams of up to 30, and streamlined
                   workflows. But my favorite parts of those days weren't just keeping things
                   running; it was digging into the systems themselves. When we rolled out Toast POS
@@ -425,15 +434,15 @@ const Module5Portfolio = () => {
                 </p>
 
                 <p>
-                  When I decided to commit to software engineering, I let my
-                  passion be my guide. I treated my education and my projects like a demanding,
-                  full-time job. I spent long, intense hours mastering the core building blocks of
-                  the web (HTML, CSS, JavaScript, TypeScript, React, Next.js, and Firebase)
-                  while teaching myself the structural mechanics of backend architecture using C#,
-                  ASP.NET, and SQL. I pushed myself out of my comfort zone to learn the things I had
-                  to know including data structures, algorithms, system design, and design patterns
-                  because I wanted to understand how to build software the right way, with clean
-                  separation of concerns and robust architecture.
+                  When I decided to commit to software engineering, I let my passion be my guide. I
+                  treated my education and my projects like a demanding, full-time job. I spent
+                  long, intense hours mastering the core building blocks of the web (HTML, CSS,
+                  JavaScript, TypeScript, React, Next.js, and Firebase) while teaching myself the
+                  structural mechanics of backend architecture using C#, ASP.NET, and SQL. I pushed
+                  myself out of my comfort zone to learn the things I had to know including data
+                  structures, algorithms, system design, and design patterns because I wanted to
+                  understand how to build software the right way, with clean separation of concerns
+                  and robust architecture.
                 </p>
 
                 <p>
