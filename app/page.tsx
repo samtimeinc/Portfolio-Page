@@ -389,7 +389,25 @@ const Module5Portfolio = () => {
                     description="Mini project blending colors, icons, and simple effects to create an engaging UI. Mock tv/film db frontend."
                     link="https://famedbvercel.vercel.app/"
                   />
+                  
+                  <ProjectCard
+                    preview={[
+                      '/skinstric01.png', 
+                      '/skinstric02.png', 
+                      '/skinstric03.png', 
+                      '/skinstric04.png',
+                      '/skinstric05.png',
+                      '/skinstric06.png',
+                      '/skinstric07.png'
+                    ]}
+                    title="FameDB"
+                    description="Frontend for AI powered skincare"
+                    link="https://famedbvercel.vercel.app/"
+                  />
+
                 </div>
+
+
               </div>
             </div>
           </div>
