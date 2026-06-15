@@ -400,9 +400,9 @@ const Module5Portfolio = () => {
                       '/skinstric06.png',
                       '/skinstric07.png'
                     ]}
-                    title="FameDB"
+                    title="Skinstric.ai"
                     description="Frontend for AI powered skincare"
-                    link="https://famedbvercel.vercel.app/"
+                    link="https://skinstric-ai-rust.vercel.app/"
                   />
 
                 </div>
