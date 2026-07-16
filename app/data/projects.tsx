@@ -11,7 +11,7 @@ export const FEATURED_PROJECTS = [
           '/ultraverse04.png',
         ]}
         title="Ultraverse NFT World"
-        description="A mock digital goods trading platform."
+        description="A digital goods trading platform."
         link="https://ultraverse-nft-world-ldxe.vercel.app/"
       />
     ),
@@ -26,7 +26,7 @@ export const FEATURED_PROJECTS = [
           '/summarist04.png',
         ]}
         title="Summarist"
-        description="A mock full-stack ebook summary service."
+        description="A full-stack ebook summary service."
         link="https://summarist-wm79.vercel.app/"
       />
     ),
@@ -38,14 +38,16 @@ export const HIDDEN_PROJECTS = [
     project: (
       <ProjectCard
         preview={[
-          '/famedb01.png', 
-          '/famedb02.png', 
-          '/famedb03.png', 
-          '/famedb04.png'
+          '/library01.png',
+          '/library02.png',
+          '/library03.png',
+          '/library04.png',
+          '/library05.png',
+          '/library06.png',
         ]}
-        title="FameDB"
-        description="Mini project blending colors, icons, and simple effects to create an awe-inspiring UI. Mock tv/film db frontend."
-        link="https://famedbvercel.vercel.app/"
+        title="Library.app"
+        description="Lightweight book library app with a clean and simple UI"
+        link="https://libraryapp-ebon.vercel.app/"
       />
     ),
   },
@@ -59,11 +61,21 @@ export const HIDDEN_PROJECTS = [
           '/skinstric04.png',
           '/skinstric05.png',
           '/skinstric06.png',
-          '/skinstric07.png'
+          '/skinstric07.png',
         ]}
         title="Skinstric"
         description="Frontend for AI powered skincare"
         link="https://skinstric-ai-rust.vercel.app/"
+      />
+    ),
+  },
+  {
+    project: (
+      <ProjectCard
+        preview={['/famedb01.png', '/famedb02.png', '/famedb03.png', '/famedb04.png']}
+        title="FameDB"
+        description="Mini project blending colors, icons, and simple effects to create a captivating UI. Tv/film db frontend."
+        link="https://famedbvercel.vercel.app/"
       />
     ),
   },
