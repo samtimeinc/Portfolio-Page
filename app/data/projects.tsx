@@ -12,19 +12,14 @@ export const FEATURED_PROJECTS = [
         ]}
         title="Ultraverse NFT World"
         description="A digital goods trading platform."
-        link="https://ultraverse-nft-world-ldxe.vercel.app/"
+        link="https://ultraverse-nft-world-mkt.vercel.app/"
       />
     ),
   },
   {
     project: (
       <ProjectCard
-        preview={[
-          '/summarist01.png',
-          '/summarist02.png',
-          '/summarist03.png',
-          '/summarist04.png',
-        ]}
+        preview={['/summarist01.png', '/summarist02.png', '/summarist03.png', '/summarist04.png']}
         title="Summarist"
         description="A full-stack ebook summary service."
         link="https://summarist-wm79.vercel.app/"
@@ -49,7 +44,7 @@ export const HIDDEN_PROJECTS = [
         description="Lightweight book library app with a clean and simple UI"
         link="https://libraryapp-ebon.vercel.app/"
       />
-    ),
+    )
   },
   {
     project: (
@@ -67,7 +62,7 @@ export const HIDDEN_PROJECTS = [
         description="Frontend for AI powered skincare"
         link="https://skinstric-ai-rust.vercel.app/"
       />
-    ),
+    )
   },
   {
     project: (
@@ -77,6 +72,6 @@ export const HIDDEN_PROJECTS = [
         description="Mini project blending colors, icons, and simple effects to create a captivating UI. Tv/film db frontend."
         link="https://famedbvercel.vercel.app/"
       />
-    ),
+    )
   },
 ]
