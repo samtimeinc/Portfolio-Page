@@ -28,6 +28,8 @@ const Module5Portfolio = () => {
   const [toasts, setToasts] = useState<ToastItem[]>([])
   const [isMounted, setIsMounted] = useState(false)
 
+  const currentYear = new Date().getFullYear();
+
   useEffect(() => {
     setIsMounted(true)
   }, [])
@@ -322,7 +324,6 @@ const Module5Portfolio = () => {
                   {HIDDEN_PROJECTS.map((product, index) => (
                     <div key={index}>{product.project}</div>
                   ))}
-
                 </div>
               </div>
             </div>
@@ -519,7 +520,7 @@ const Module5Portfolio = () => {
       >
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-sm text-gray-500 md:flex-1">
-            © {new Date().getFullYear()} Samnang Phin. All rights reserved.
+            © {currentYear} Samnang Phin. All rights reserved.
           </div>
           <button
             className="relative group flex items-center focus:outline-none"
