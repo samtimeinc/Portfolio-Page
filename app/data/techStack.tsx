@@ -15,12 +15,16 @@ import GitHub from '@/app/components/svg/github'
 import Redux from '@/app/components/svg/redux'
 import Stripe from '@/app/components/svg/stripe'
 import JQuery from '@/app/components/svg/jQuery'
+import TailwindCSS from '../components/svg/TailwindCSS'
+import Bootstrap from '../components/svg/Bootstrap'
 
 export const TECH_STACK = [
   { name: 'HTML5', Icon: Html5 },
   { name: 'CSS3', Icon: Css3 },
   { name: 'JavaScript', Icon: Javascript },
   { name: 'TypeScript', Icon: Typescript },
+  { name: 'TailwindCSS', Icon: TailwindCSS },
+  { name: 'Bootstrap', Icon: Bootstrap },
   { name: 'React', Icon: ReactLogo },
   { name: 'Next.js', Icon: NextJS },
   { name: 'Node.js', Icon: NodeJS },
