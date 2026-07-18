@@ -11,7 +11,7 @@ export const FEATURED_PROJECTS = [
           '/ultraverse04.png',
         ]}
         title="Ultraverse NFT World"
-        description="A digital goods trading platform."
+        description="A digital marketplace and goods trading platform."
         link="https://ultraverse-nft-world-mkt.vercel.app/"
       />
     ),
@@ -21,7 +21,7 @@ export const FEATURED_PROJECTS = [
       <ProjectCard
         preview={['/summarist01.png', '/summarist02.png', '/summarist03.png', '/summarist04.png']}
         title="Summarist"
-        description="A full-stack ebook summary service."
+        description="A full-stack ebook summary service with Stripe Integration"
         link="https://summarist-wm79.vercel.app/"
       />
     ),
@@ -41,10 +41,10 @@ export const HIDDEN_PROJECTS = [
           '/library06.png',
         ]}
         title="Library.app"
-        description="Lightweight book library app with a clean and simple UI"
+        description="Lightweight e-commerce app for books with a clean and simple UI"
         link="https://libraryapp-ebon.vercel.app/"
       />
-    )
+    ),
   },
   {
     project: (
@@ -59,19 +59,19 @@ export const HIDDEN_PROJECTS = [
           '/skinstric07.png',
         ]}
         title="Skinstric"
-        description="Frontend for AI powered skincare"
+        description="Frontend for AI powered skincare with user dashboard"
         link="https://skinstric-ai-rust.vercel.app/"
       />
-    )
+    ),
   },
   {
     project: (
       <ProjectCard
         preview={['/famedb01.png', '/famedb02.png', '/famedb03.png', '/famedb04.png']}
         title="FameDB"
-        description="Mini project blending colors, icons, and simple effects to create a captivating UI. Tv/film db frontend."
+        description="Tv/film db frontend blending colors, icons, and simple effects to create a captivating UI"
         link="https://famedbvercel.vercel.app/"
       />
-    )
+    ),
   },
 ]
