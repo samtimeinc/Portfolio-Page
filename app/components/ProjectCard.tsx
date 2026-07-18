@@ -4,13 +4,17 @@ import Image from 'next/image'
 import { useState } from 'react'
 import ChevronLeft from './svg/chevronLeft';
 import ChevronRight from './svg/chevronRight';
+import Globe from './svg/Globe';
+import GithubIcon from './svg/GithubIcon';
+
 
 
 interface ProjectCardProps {
   preview: string[]
   title: string
   description: string
-  link: string
+  liveDemo?: string
+  github?: string
   className?: string
 }
 
@@ -18,7 +22,7 @@ interface ProjectCardProps {
  * ProjectCard Component
  * Displays a project with a title, description, and an image slide deck preview.
  */
-const ProjectCard = ({ preview, title, description, link, className = '' }: ProjectCardProps) => {
+const ProjectCard = ({ preview, title, description, liveDemo, github, className = '' }: ProjectCardProps) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [touchStart, setTouchStart] = useState<number | null>(null)
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
@@ -64,7 +68,7 @@ const ProjectCard = ({ preview, title, description, link, className = '' }: Proj
         onTouchEnd={handleTouchEnd}
       >
         {preview.length > 0 ? (
-          <>
+          <div className="relative w-full h-full">
             <div
               className="flex h-full transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -90,16 +94,14 @@ const ProjectCard = ({ preview, title, description, link, className = '' }: Proj
                   className="absolute left-4 top-1/2 -translate-y-1/2 bg-purple-500 hover:bg-purple-400 backdrop-blur-md p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-10"
                   aria-label="Previous slide"
                 >
-                  {/* ← */}
-                  <ChevronLeft className="w-4 h-4 text-white fill-current" />
+                  <ChevronLeft className="w-4 h-4 text-gray-300 fill-current" />
                 </button>
                 <button
                   onClick={nextSlide}
                   className="absolute right-4 top-1/2 -translate-y-1/2 bg-purple-500 hover:bg-purple-400 backdrop-blur-md p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-10"
                   aria-label="Next slide"
                 >
-                  {/* → */}
-                  <ChevronRight className="w-4 h-4 text-white fill-current" />
+                  <ChevronRight className="w-4 h-4 text-gray-300 fill-current" />
                 </button>
                 <div className="absolute inset-x-0 bottom-4 flex justify-center gap-2 z-10">
                   {preview.map((_, index) => (
@@ -113,7 +115,15 @@ const ProjectCard = ({ preview, title, description, link, className = '' }: Proj
                 </div>
               </>
             )}
-          </>
+            <div className="absolute z-100 flex gap-6 bottom-2 right-4 opacity-0 group-hover:opacity-100 transition-all bg-gray-600 p-2 rounded-full">
+              <a href={liveDemo} target="_blank" rel="noopener noreferrer">
+                <Globe className="w-7 h-7 text-purple-500 fill-current hover:text-purple-400" />
+              </a>
+              <a href={github} target="_blank" rel="noopener noreferrer">
+                <GithubIcon className="w-7 h-7 text-purple-500 fill-current hover:text-purple-400" />
+              </a>
+            </div>
+          </div>
         ) : (
           <div className="w-full h-full flex items-center justify-center text-gray-400 font-medium">
             Project Preview
@@ -122,7 +132,7 @@ const ProjectCard = ({ preview, title, description, link, className = '' }: Proj
         <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/5 transition-all duration-500 pointer-events-none"></div>
       </div>
       <a
-        href={link}
+        href={liveDemo}
         target="_blank"
         rel="noopener noreferrer"
         className="text-2xl font-bold mb-2 block group-hover:text-blue-600 transition-colors cursor-pointer"

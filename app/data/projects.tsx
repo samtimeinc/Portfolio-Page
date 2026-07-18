@@ -12,7 +12,8 @@ export const FEATURED_PROJECTS = [
         ]}
         title="Ultraverse NFT World"
         description="A digital marketplace and goods trading platform."
-        link="https://ultraverse-nft-world-mkt.vercel.app/"
+        liveDemo="https://ultraverse-nft-world-mkt.vercel.app/"
+        github="https://github.com/samtimeinc/Ultraverse-NFT-World-Marketplace"
       />
     ),
   },
@@ -22,7 +23,8 @@ export const FEATURED_PROJECTS = [
         preview={['/summarist01.png', '/summarist02.png', '/summarist03.png', '/summarist04.png']}
         title="Summarist"
         description="A full-stack ebook summary service with Stripe Integration"
-        link="https://summarist-wm79.vercel.app/"
+        liveDemo="https://summarist-wm79.vercel.app/"
+        github="https://github.com/samtimeinc/summarist"
       />
     ),
   },
@@ -42,7 +44,8 @@ export const HIDDEN_PROJECTS = [
         ]}
         title="Library.app"
         description="Lightweight e-commerce app for books with a clean and simple UI"
-        link="https://libraryapp-ebon.vercel.app/"
+        liveDemo="https://libraryapp-ebon.vercel.app/"
+        github="https://github.com/samtimeinc/library.app"
       />
     ),
   },
@@ -60,7 +63,8 @@ export const HIDDEN_PROJECTS = [
         ]}
         title="Skinstric"
         description="Frontend for AI powered skincare with user dashboard"
-        link="https://skinstric-ai-rust.vercel.app/"
+        liveDemo="https://skinstric-ai-rust.vercel.app/"
+        github="https://github.com/samtimeinc/skinstric.ai"
       />
     ),
   },
@@ -70,7 +74,8 @@ export const HIDDEN_PROJECTS = [
         preview={['/famedb01.png', '/famedb02.png', '/famedb03.png', '/famedb04.png']}
         title="FameDB"
         description="Tv/film db frontend blending colors, icons, and simple effects to create a captivating UI"
-        link="https://famedbvercel.vercel.app/"
+        liveDemo="https://famedbvercel.vercel.app/"
+        github="https://github.com/samtimeinc/famedb_vercel"
       />
     ),
   },
