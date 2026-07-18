@@ -24,6 +24,7 @@
 - Implement proper TypeScript types for props and state
 - Handle loading and error states explicitly
 - Prefer composition over prop drilling
+- Use context for shared state instead of prop drilling when appropriate
 
 ### Accessibility
 
