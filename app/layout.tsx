@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Sam Phin Portfolio - Welcome!',
-  description: 'Portfolio website for Sam Phin, a software engineer specializing in frontend development. Explore projects, skills, and experience in web development.',
+  description: 'Portfolio website for Sam Phin, a frontend software engineer specializing Typescript, React, Next.js, and Node.js. Explore my projects, skills, and experience in web development.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
