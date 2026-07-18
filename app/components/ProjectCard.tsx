@@ -2,6 +2,9 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
+import ChevronLeft from './svg/chevronLeft';
+import ChevronRight from './svg/chevronRight';
+
 
 interface ProjectCardProps {
   preview: string[]
@@ -66,11 +69,11 @@ const ProjectCard = ({ preview, title, description, link, className = '' }: Proj
               className="flex h-full transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              {preview.map((src, idx) => (
-                <div key={idx} className="relative flex-shrink-0 w-full h-full">
+              {preview.map((src, index) => (
+                <div key={index} className="relative flex-shrink-0 w-full h-full">
                   <Image
                     src={src}
-                    alt={`${title} preview ${idx + 1}`}
+                    alt={`${title} preview ${index + 1}`}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -84,24 +87,26 @@ const ProjectCard = ({ preview, title, description, link, className = '' }: Proj
               <>
                 <button
                   onClick={prevSlide}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-md p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-10"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-purple-500 hover:bg-purple-400 backdrop-blur-md p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-10"
                   aria-label="Previous slide"
                 >
-                  ←
+                  {/* ← */}
+                  <ChevronLeft className="w-4 h-4 text-white fill-current" />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-md p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-10"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-purple-500 hover:bg-purple-400 backdrop-blur-md p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-10"
                   aria-label="Next slide"
                 >
-                  →
+                  {/* → */}
+                  <ChevronRight className="w-4 h-4 text-white fill-current" />
                 </button>
                 <div className="absolute inset-x-0 bottom-4 flex justify-center gap-2 z-10">
-                  {preview.map((_, idx) => (
+                  {preview.map((_, index) => (
                     <div
-                      key={idx}
+                      key={index}
                       className={`w-1.5 h-1.5 rounded-full transition-all ${
-                        idx === currentSlide ? 'bg-white w-4' : 'bg-white/50'
+                        index === currentSlide ? 'bg-white w-4' : 'bg-white/50'
                       }`}
                     />
                   ))}
